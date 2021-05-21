@@ -6,6 +6,7 @@ const { CanvasSenpai } = require('canvas-senpai');
 const canva = new CanvasSenpai();
 
 const client = new Discord.Client();
+const roleClaim = require('./role-claim');
 
 //mongodb for discord-xp
 Levels.setURL("mongodb+srv://jeb47:nigger@uwucluster.ugjlm.mongodb.net/Data")
@@ -54,6 +55,7 @@ client.on("message", async message => {
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setActivity('vibetech | !help', { type: 'WATCHING' }).catch(console.error);
+  roleClaim(client)
 });
 
 keepAlive()
