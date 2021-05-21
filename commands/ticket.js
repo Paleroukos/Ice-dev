@@ -26,7 +26,7 @@ module.exports = {
     const channel = await message.guild.channels.create(`ticket: ${message.author.tag}`);
     
     
-    channel.setParent("825381219398189083");
+    channel.setParent("845020442926514246");
 
   
     channel.updateOverwrite(message.guild.id, {
@@ -75,6 +75,7 @@ module.exports = {
           channel.send("Deleting this channel in 5 seconds!");
           setTimeout(() => channel.delete(), 5000);
           break;
+          
       }
     });
 
