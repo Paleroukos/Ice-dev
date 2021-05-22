@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const Levels = require('discord-xp');
-const keepAlive = require('./server');
 require('dotenv').config();
 const { CanvasSenpai } = require('canvas-senpai');
 const canva = new CanvasSenpai();
@@ -58,5 +57,5 @@ client.on('ready', () => {
   roleClaim(client)
 });
 
-keepAlive()
+
 client.login(process.env.DISCORD_TOKEN);
